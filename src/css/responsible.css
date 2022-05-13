@@ -1,0 +1,43 @@
+@media (max-width: 1280px) {
+
+    .page-header .title {
+        font-size: 1.8rem;
+    }
+
+    .character-selection .character-list {
+        max-width: 330px;
+    }
+
+    .character-selection .character-list .character {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width:767px) {
+    body::before {
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+    }
+
+    main {
+        padding: 0 5px;
+        justify-content: start;
+    }
+
+    .page-header .title {
+        font-size: 1.5rem;
+    }
+
+    .character-selection .character-big-size {
+        display: none;
+    }
+}
+
+
+@media (max-width:360px) {
+    .page-header .title {
+        font-size: 1.3rem;
+    }
+}

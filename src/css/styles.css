@@ -1,0 +1,195 @@
+body {
+    font-family: 'ssf4', Courier, monospace;
+    background: var(--cor-secundaria);
+
+}
+
+body::before {
+    /* pseud-element creation before the body, for the image in background*/
+    content: '';
+    background-image: url("../images/misc/bg.jpg");
+    background-repeat: no-repeat;
+
+    /*place one element on top of another */
+    position: absolute;
+
+    /*to cover all the bg*/
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+
+}
+
+
+main {
+    /*100% of view port of the screen, dont need to calculate the height of screen in any device*/
+    min-height: 100vh;
+
+    /*this causes the elements to be one under the other, if it was ROW, they would be next to each other*/
+    display: flex;
+    flex-direction: column;
+
+    /*this centers the children of the class*/
+    justify-content: center;
+
+
+}
+
+.page-header {
+    /*prioritize the element ahead*/
+    z-index: 1;
+
+    display: flex;
+
+    /*this centers the children of the class*/
+    justify-content: center;
+}
+
+.page-header .title {
+    color: var(--cor-titulo-fraco);
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    line-height: 6.8rem;
+
+    /*to make it work in more browsers*/
+    -webkit-text-stroke: 2px var(--cor-titulo-forte);
+}
+
+.character-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-selection .character-big-size {
+    text-align: center;
+    width: 30%;
+    height: 70vh;
+    position: relative;
+}
+
+.character-selection .character-big-size img {
+    position: absolute;
+
+    /*Another form to centralize elements on css with absolute*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /*resize the image size because the images that i choose is horrible*/
+    width: auto;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.character-selection .character-big-size .character-name::before {
+    content: '';
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+
+/*css for player 1 and 2 custom box*/
+.character-selection .character-big-size .character-name h2 {
+    color: var(--cor-padrao);
+    font-family: 'command', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.character-selection .character-big-size.character-player-1 .character-name::before {
+    background-color: var(--cor-azul-principal);
+}
+
+.character-selection .character-big-size.character-player-2 .character-name::before {
+    background-color: var(--cor-vermelha-principal);
+}
+
+.character-selection .character-list {
+    display: flex;
+
+    /*resizes an element down when the screen is too small*/
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+
+    /*he gives a spacing between the children*/
+    gap: 12px;
+}
+
+.character-selection .character-list .character {
+    border: 2px solid var(--cor-padrao);
+    background-color: var(--cor-padrao);
+    width: 30%;
+    height: 10rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.15s ease-in-out;
+}
+
+.character-selection .character-list .character img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+/*Player 1 border*/
+.character-selection .character-list .character.selected {
+    border: 2px solid var(--cor-azul-media);
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.character-selection .character-list .character:hover {
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2;
+}
+
+
+/*Player 2 border*/
+.character-selection .character-list .character.player-2-selected {
+    border: 2px solid var(--cor-vermelha-fraca);
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+/*Player 2 border*/
+.character-selection .character-list .character.player-2-selected:hover {
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.character-selection .character-list .character .tag {
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--cor-azul-media);
+    transition: opacity .3s ease-in-out;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.character-selection .character-list .character.selected .tag {
+    display: block;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.character-selection .character-list .character.character.player-2-selected .tag {
+    display: block;
+    animation: text-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
