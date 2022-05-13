@@ -7,7 +7,7 @@ PT-BR :
 Eu sou um grande fã da franquia persona, então eu decidi fazer um conceito de jogo de luta feito por fã, onde você seleciona os personagens que você gostaria de usar e enfrentar.
 
 Desktop Version
-![image](https://user-images.githubusercontent.com/40373628/168334577-eb6827a4-4a57-4b9a-94a4-7b3089012e04.png)
+![image](https://user-images.githubusercontent.com/40373628/168335710-0cca8d2d-b65e-4ed6-bf1e-22a1ab843726.png)
 
 Mobile Version ( still needs some modifications )
 
