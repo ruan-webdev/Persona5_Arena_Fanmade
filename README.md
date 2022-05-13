@@ -12,3 +12,4 @@ Desktop Version
 Mobile Version ( still needs some modifications )
 
 ![image](https://user-images.githubusercontent.com/40373628/168335194-277b2a00-a39e-40ef-99e2-4f4c922f7550.png)
+
