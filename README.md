@@ -6,6 +6,8 @@ En-Us : I'm a big fan of the persona franchise, so I decided to make a fanmade f
 PT-BR : 
 Eu sou um grande fã da franquia persona, então eu decidi fazer um conceito de jogo de luta feito por fã, onde você seleciona os personagens que você gostaria de usar e enfrentar.
 
+link vercel : https://vercel.com/ruan-webdev/persona5-arena-fanmade
+
 Desktop Version
 ![image](https://user-images.githubusercontent.com/40373628/168335710-0cca8d2d-b65e-4ed6-bf1e-22a1ab843726.png)
 
